@@ -164,43 +164,6 @@ The editor itself can still run without Python installed, but executing and debu
 
 ---
 
-# Build EXE (PyInstaller)
-
-```powershell
-pip install pyinstaller
-
-pyinstaller --onedir --windowed --icon=icon.ico --name "Stella Code" `
-  --add-data "icon.png;." `
-  --add-data "icon.ico;." `
-  --add-data "background.mp4;." `
-  --collect-all PySide6 `
-  main.py
-```
-
-Output:
-
-```txt
-dist/Stella Code/Stella Code.exe
-```
-
----
-
-# Windows "Open With" Registration
-
-```powershell
-python register_open_with.py
-```
-
-Uninstall:
-
-```powershell
-python register_open_with.py --uninstall
-```
-
-Per-user only. No administrator privileges required.
-
----
-
 # Limitations
 
 * No autocomplete
