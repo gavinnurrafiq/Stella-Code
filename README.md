@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo.png" width="180" alt="Stella Code Logo">
+  <img src="icon.png" width="180" alt="Stella Code Logo">
 </p>
 # Stella Code
 
