@@ -41,6 +41,7 @@ No installation required.
 <p align="center">
   <img src="recording.gif" width="100%" alt="Stella Code Demo">
 </p>
+
 ## Editor
 
 * Multi-tab editor with **double-click tab rename**
