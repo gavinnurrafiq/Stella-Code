@@ -1,14 +1,43 @@
 <p align="center">
   <img src="icon.png" width="180" alt="Stella Code Logo">
 </p>
-# Stella Code
 
-A visually stylized Python code editor built with PySide6.
+<p align="center">
+  <img src="recording.gif" width="100%" alt="Stella Code Demo">
+</p>
 
-Stella Code focuses on immersive visuals, smooth editing experience, and cyber-ruby aesthetics rather than becoming a full heavyweight IDE.
+<h1 align="center">Stella Code</h1>
+
+<p align="center">
+  A visually stylized Python code editor built with PySide6.
+</p>
+
+<p align="center">
+  Neon visuals • Animated backgrounds • Integrated debugger • Cyber-ruby aesthetics
+</p>
+
+---
+
+Stella Code focuses on immersive visuals, smooth editing experience, and cinematic cyber-ruby aesthetics rather than becoming a heavyweight IDE.
 
 > Single-file application: `main.py` (~2300 lines).
 > Intentionally minimal — no autocomplete, no file explorer, no splash screen.
+
+---
+
+# Download & Use
+
+Download the latest release:
+
+👉 https://github.com/gavinnurrafiq/Stella-Code/releases/tag/v1.0.0
+
+Simply extract the archive and run:
+
+```txt
+Stella Code.exe
+```
+
+No installation required.
 
 ---
 
@@ -109,32 +138,10 @@ System-wide glowing mouse trail overlay:
 
 # Requirements
 
-* Python 3.10+
-* PySide6 ≥ 6.6
-* Windows 11 recommended
-* H.264 codec support
+* Windows 10/11
+* Python 3.10+ installed in PATH (required for Run/Debug)
 
-Install:
-
-```powershell
-pip install PySide6
-```
-
----
-
-# Running
-
-```powershell
-cd "Stella Code"
-pip install -r requirements.txt
-python main.py
-```
-
-Open files directly:
-
-```powershell
-python main.py script.py another.py
-```
+The editor itself can still run without Python installed, but executing and debugging scripts requires a system Python installation.
 
 ---
 
@@ -216,11 +223,22 @@ Stella Code/
 ├── requirements.txt
 ├── icon.png
 ├── icon.ico
+├── recording.gif
 ├── background.mp4
 ├── Stella Code.cmd
 ├── register_open_with.py
 └── README.md
 ```
+
+---
+
+# License
+
+This project is licensed under the PolyForm Noncommercial License 1.0.0.
+
+You may use, modify, and distribute this software for non-commercial purposes only.
+
+Commercial usage is prohibited without explicit permission.
 
 ---
 
