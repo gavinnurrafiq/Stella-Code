@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="logo.png" width="180" alt="Stella Code Logo">
+</p>
 # Stella Code
 
 A visually stylized Python code editor built with PySide6.
