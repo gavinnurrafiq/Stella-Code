@@ -2,10 +2,6 @@
   <img src="icon.png" width="180" alt="Stella Code Logo">
 </p>
 
-<p align="center">
-  <img src="recording.gif" width="100%" alt="Stella Code Demo">
-</p>
-
 <h1 align="center">Stella Code</h1>
 
 <p align="center">
@@ -42,7 +38,9 @@ No installation required.
 ---
 
 # Features
-
+<p align="center">
+  <img src="recording.gif" width="100%" alt="Stella Code Demo">
+</p>
 ## Editor
 
 * Multi-tab editor with **double-click tab rename**
