@@ -36,7 +36,80 @@ Stella Code.exe
 No installation required.
 
 ---
+## System Requirements
 
+### Minimum (runs, visual effects may stutter)
+
+| Component | Spec |
+|---|---|
+| OS | Windows 10 (1903+) 64-bit |
+| CPU | Dual-core 2.0 GHz (Intel i3 5th gen+ / AMD Ryzen 3) |
+| RAM | 4 GB |
+| GPU | Integrated with HW H.264 decode (Intel HD 4000+, AMD Vega) |
+| Disk | 500 MB free |
+| Display | 1366×768, 60 Hz |
+
+### Recommended (all effects smooth)
+
+| Component | Spec |
+|---|---|
+| OS | **Windows 11** build 22000+ (required for the red DWM title bar) |
+| CPU | Quad-core 2.5 GHz (Intel i5 8th gen+ / AMD Ryzen 5) |
+| RAM | 8 GB |
+| GPU | Modern integrated (Intel Iris Xe, AMD RDNA) or entry-level dedicated |
+| Disk | SSD with 1 GB free |
+| Display | 1920×1080, 60 Hz |
+
+### Optimal (multi-monitor + large files + max effects)
+
+| Component | Spec |
+|---|---|
+| OS | Windows 11 build 22631+ |
+| CPU | 6+ cores at 3.0 GHz+ |
+| RAM | 16 GB |
+| GPU | Dedicated (GTX 1650 / RX 5500 / Iris Xe Plus) |
+| Disk | NVMe SSD |
+| Display | High refresh (90 Hz+) — marquee & mouse trail feel noticeably smoother |
+
+### Software dependencies
+
+| Item | Minimum version | Notes |
+|---|---|---|
+| Python | 3.10+ (3.13 recommended) | Required on PATH for Run (F5) & Debug (F6) |
+| Visual C++ Redistributable | 2015-2022 x64 | [aka.ms/vs/17/release/vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe) — **required** for the bundled exe |
+| H.264 codec | Built-in via Windows Media Foundation | Used by the video background |
+| PowerShell | 5.1+ or pwsh 7+ | Used by the embedded terminal |
+
+Dev mode also needs: `PySide6>=6.6`
+
+### Runtime resource usage
+
+| Resource | Idle (all effects on) | Active coding |
+|---|---|---|
+| RAM | 200-350 MB | 250-450 MB |
+| CPU | 2-5% | 5-12% |
+| GPU | 5-15% (HW video decode) | same |
+
+The 60 Hz mouse trail polling adds ~1-2% CPU **at all times**, including while
+the app is minimized.
+
+### Not supported
+
+- **macOS / Linux** — the DWM title bar and PowerShell embed are Windows-only
+- **Windows 7 / 8** — PySide6 6.6+ requires Windows 10+; the red title bar requires Windows 11
+- **Remote Desktop / RDP** — the mouse trail and video background often break under RDP
+- **Hardware without HW video decode** — software H.264 decode causes CPU spikes
+
+### Tweaks for weaker hardware
+
+Edit the constants in [`main.py`](main.py):
+
+| Bottleneck | What to reduce | How |
+|---|---|---|
+| High CPU | Marquee frame rate | `MarqueeBanner.TICK_MS` 16 → 33 |
+| High CPU + GPU | Mouse trail frame rate | `MouseTrailOverlay.TICK_MS` 16 → 33 |
+| Weak GPU | Video background | Delete `background.mp4` or set `VideoBackgroundWidget.TINT_ALPHA = 255` |
+| Lag on large files | Glow halo | Set `GlowLayer.BLUR_RADIUS = 0` |
 # Features
 <p align="center">
   <img src="recording.gif" width="100%" alt="Stella Code Demo">
