@@ -1,0 +1,215 @@
+/* StellaCode Lite — solid dark RED theme.
+   No rgba alpha anywhere => no compositing, no GPU work.
+   Flat colors, minimal painting. */
+
+QMainWindow,
+QWidget#central {
+    background: #1a1012;
+}
+
+QMenuBar {
+    background: #16090b;
+    color: #e8d8d8;
+    border: none;
+    padding: 2px 4px;
+}
+QMenuBar::item {
+    background: transparent;
+    padding: 4px 10px;
+}
+QMenuBar::item:selected,
+QMenuBar::item:pressed {
+    background: #8a1a26;
+    color: #ffffff;
+}
+QMenu {
+    background: #1f1416;
+    color: #e8d8d8;
+    border: 1px solid #4a2030;
+    padding: 2px;
+}
+QMenu::item {
+    padding: 4px 20px;
+}
+QMenu::item:selected {
+    background: #8a1a26;
+    color: #ffffff;
+}
+QMenu::separator {
+    height: 1px;
+    background: #4a2030;
+    margin: 4px 6px;
+}
+
+#toolbar {
+    background: #20141a;
+    border-bottom: 1px solid #4a2030;
+}
+#toolbar QPushButton {
+    background: #4a1a24;
+    color: #f0e0e0;
+    border: 1px solid #6a2030;
+    padding: 4px 12px;
+    min-width: 52px;
+}
+#toolbar QPushButton:hover {
+    background: #8a1a26;
+    border-color: #c0303a;
+    color: #ffffff;
+}
+#toolbar QPushButton:pressed {
+    background: #c0303a;
+}
+#toolbar QPushButton:disabled {
+    color: #806060;
+    background: #2a1418;
+}
+#toolbar QLabel#sep {
+    color: #5a2030;
+    padding: 0 4px;
+}
+
+QPlainTextEdit#codeEditor {
+    background: #1a1012;
+    color: #f0e8e8;
+    selection-background-color: #8a1a26;
+    selection-color: #ffffff;
+    border: none;
+}
+
+/* ---------- Tabs ---------- */
+QTabWidget::pane {
+    border: none;
+    background: #1a1012;
+    top: -1px;
+}
+QTabBar {
+    background: #16090b;
+    qproperty-drawBase: 0;
+}
+QTabBar::tab {
+    background: #20141a;
+    color: #c8a8a8;
+    border: 1px solid transparent;
+    border-bottom: 2px solid transparent;
+    padding: 6px 14px;
+    margin-right: 1px;
+    min-width: 80px;
+}
+QTabBar::tab:hover {
+    background: #2e1a20;
+    color: #f0d8d8;
+}
+QTabBar::tab:selected {
+    background: #1a1012;
+    color: #ffffff;
+    border-bottom: 2px solid #c0303a;
+}
+QTabBar::close-button {
+    subcontrol-position: right;
+    background: transparent;
+    border-radius: 7px;
+    margin: 4px;
+}
+QTabBar::close-button:hover {
+    background: #c0303a;
+}
+QTabBar QToolButton {
+    background: #20141a;
+    color: #e8c8c8;
+    border: 1px solid #4a2030;
+}
+QTabBar QToolButton:hover {
+    background: #8a1a26;
+    color: #ffffff;
+}
+QPushButton#tabAddBtn {
+    background: #4a1a24;
+    color: #ffd8d8;
+    border: 1px solid #6a2030;
+    margin: 2px 4px;
+    font-weight: bold;
+    font-size: 14px;
+}
+QPushButton#tabAddBtn:hover {
+    background: #8a1a26;
+    color: #ffffff;
+    border-color: #c0303a;
+}
+
+#outputHeader {
+    background: #20141a;
+    border-top: 1px solid #4a2030;
+    border-bottom: 1px solid #4a2030;
+}
+#outputHeader QLabel {
+    color: #d8c0c0;
+    padding: 4px 0;
+    font-weight: 600;
+}
+#outputHeader QPushButton {
+    background: #2e1a1e;
+    color: #c8a8a8;
+    border: 1px solid #6a2030;
+    padding: 2px 10px;
+    margin: 3px;
+}
+#outputHeader QPushButton:hover {
+    background: #8a1a26;
+    color: #ffffff;
+}
+
+QPlainTextEdit#output {
+    background: #14090b;
+    color: #d8c8c8;
+    border: none;
+    padding: 4px 6px;
+    selection-background-color: #8a1a26;
+}
+
+QStatusBar {
+    background: #16090b;
+    color: #c8a8a8;
+    border-top: 1px solid #4a2030;
+}
+QStatusBar::item { border: none; }
+QStatusBar QLabel { padding: 0 8px; }
+
+QSplitter::handle {
+    background: #4a2030;
+}
+QSplitter::handle:vertical { height: 4px; }
+
+QScrollBar:vertical, QScrollBar:horizontal {
+    background: #16090b;
+    border: none;
+    margin: 0;
+}
+QScrollBar:vertical { width: 12px; }
+QScrollBar:horizontal { height: 12px; }
+QScrollBar::handle:vertical, QScrollBar::handle:horizontal {
+    background: #6a2030;
+    min-width: 24px;
+    min-height: 24px;
+    margin: 2px;
+}
+QScrollBar::handle:hover {
+    background: #c0303a;
+}
+QScrollBar::add-line, QScrollBar::sub-line,
+QScrollBar::add-page, QScrollBar::sub-page {
+    background: transparent;
+    border: none;
+    height: 0; width: 0;
+}
+
+QMessageBox { background: #1f1416; color: #f0e0e0; }
+QMessageBox QLabel { color: #f0e0e0; }
+QMessageBox QPushButton {
+    background: #8a1a26;
+    color: #ffffff;
+    border: 1px solid #c0303a;
+    padding: 4px 16px;
+    min-width: 64px;
+}
+QMessageBox QPushButton:hover { background: #c0303a; }
